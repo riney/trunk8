@@ -1,6 +1,10 @@
 #ensmallener {
 }
 
+#spacer {
+	height: 200px;
+}
+
 input {
 	font-size: 24pt;
 	font-family: "Courier New", "Courier", "monospace";
