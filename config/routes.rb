@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.connect '/', :controller => 'keys', :action => 'new'
+  map.connect '/', :controller => 'keys', :action => 'new_key'
+  
   # who sez only sinatra does iterated routes
   %w(about).each do |route|
     map.connect "/#{route}", :controller => 'site', :action => route

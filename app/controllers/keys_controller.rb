@@ -1,4 +1,8 @@
 class KeysController < ApplicationController
+  def new_key
+    @count = Key.count
+  end
+  
   def show
     @key = Key.find_by_url(params[:key_url])
 
