@@ -1,2 +1,3 @@
 config/secret
 log/*
+db/*.sqlite3

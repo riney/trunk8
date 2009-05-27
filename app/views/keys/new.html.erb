@@ -20,7 +20,7 @@
     
 <div class="span-24 last" id="ensmallener">  
   <% form_tag '/keys/create' do -%>
-    <%= text_field_tag 'license_key', '', :size => 32, :maxlength => 64 %>
+    <%= text_field_tag 'license_key', '', :size => 32, :maxlength => 255 %>
     &nbsp;
     <%= submit_tag 'trunk8' %>
   <% end -%>

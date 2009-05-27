@@ -15,6 +15,7 @@ class Key < ActiveRecord::Base
   
   before_create :set_url
   validates_presence_of :license_key, :message => "You gotta put in a key!"
+  validates_length_of :license_key, :maximum => 255, :message => "Key's too freakin' long, man!"
   
   def set_url
     begin potential_url = Key.generate_url end while Key.exists?(:url => potential_url)

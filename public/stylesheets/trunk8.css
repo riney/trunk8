@@ -8,13 +8,14 @@ input {
 
 .trunk_key {
 	font-family: "Courier New", "Courier", "monospace";
-	font-size: 36pt;
+	font-size: 12pt;
 	margin-left: 10px;
+	display: inline-block;
 }
 
 .trunk_url {
 	font-family: "Courier New", "Courier", "monospace";
-	font-size: 48pt;
+	font-size: 42pt;
 	font-weight: bold;
 	margin-left: 10px;
 }

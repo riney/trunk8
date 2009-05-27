@@ -1,11 +1,13 @@
 <div class="span-24 last">
   The license key
   
-  <div class="trunk_key"><%= @key.license_key %></div>
+  <form action="">
+    <%= text_area_tag 'license_key', h(@key.license_key), :size => "1x1"  %>
+  </form>
   
   trunk8s to:
 
-  <div class="trunk_url"><%= link_to "http://trunk8.net/#{@key.url}", "trunk8.net/#{@key.url}" %></div>
+  <div class="trunk_url"><%= link_to "http://trunk8.net/#{h(@key.url)}", "trunk8.net/#{h(@key.url)}" %></div>
 
   <%= link_to 'trunk8 another license key?', '/' %>
 </div>
