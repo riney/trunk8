@@ -7,7 +7,11 @@
   
   trunk8s to:
 
-  <div class="trunk_url"><%= link_to "http://trunk8.net/#{h(@key.url)}", "trunk8.net/#{h(@key.url)}" %></div>
+  <div class="trunk_url"><%= link_to "trunk8.net/#{h(@key.url)}", "http://trunk8.net/#{h(@key.url)}", :only_path => false  %></div>
 
+  <div class="trunky_message">Trunky the Key-Eating Elephant says, "<%= trunky_message %>"</div>
+  
+  <hr class="space" />
+  
   <%= link_to 'trunk8 another license key?', '/' %>
 </div>
