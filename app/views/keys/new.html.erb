@@ -1,0 +1,27 @@
+<div class="span-12 last">
+    License keys are long and stupid.
+    <br/>
+    Have you ever tried to read one over the phone? It sucks.
+    <br/><br/>
+    Trunky, the license-key elephant, will eat your unwieldy keys and ensmallen them into a easier-to-handle, <%= Key::URL_SIZE %>-character long nugget of goodness. Try it!
+
+</div>
+
+<hr class="space" />
+
+<%- unless @key.nil? || @key.errors.nil? %>
+  <div class="span-8 last">
+    <%- @key.errors.each do |key, msg| -%>  
+      <div class="error"><%= msg %></div>  
+ 
+    <%- end -%>
+  </div>
+<%- end %>
+    
+<div class="span-24 last" id="ensmallener">  
+  <% form_tag '/keys/create' do -%>
+    <%= text_field_tag 'license_key', '', :size => 32, :maxlength => 64 %>
+    &nbsp;
+    <%= submit_tag 'trunk8' %>
+  <% end -%>
+</div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>trunk8 - license key ensmallener</title>
+    
+    <%= stylesheet_link_tag 'blueprint/screen', :media => "screen, projection" %>
+    <%= stylesheet_link_tag 'blueprint/print', :media => "print" %>
+    <!--[if IE]>
+      <%# stylesheet_link_tag 'blueprint/ie', :media => "screen, projection" %>
+    <![endif]-->
+    <%= stylesheet_link_tag 'trunk8' %>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="span-24 last">
+        <h1>trunk8</h1>
+      </div>
+
+      <hr/>
+     
+      <%= yield %>
+      
+      <hr class="space">
+      <hr/> 
+      
+      <div class="span-24 last centered">
+        <%= link_to_unless_current 'home', '/' %> | <%= link_to_unless_current 'about trunk8', '/about' %> | trunk8 is a <%= link_to 'rineysoft', 'http://rineysoft.com/blog' %> app
+      </div>
+      
+    </div>
+  </body>
+</html>

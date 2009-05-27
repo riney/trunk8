@@ -1,0 +1,27 @@
+#ensmallener {
+}
+
+input {
+	font-size: 24pt;
+	font-family: "Courier New", "Courier", "monospace";
+}
+
+.trunk_key {
+	font-family: "Courier New", "Courier", "monospace";
+	font-size: 36pt;
+	margin-left: 10px;
+}
+
+.trunk_url {
+	font-family: "Courier New", "Courier", "monospace";
+	font-size: 48pt;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.error {
+	border: 1pt solid black;
+	background-color: pink;
+	color: black;
+	font-weight: bold;
+}
