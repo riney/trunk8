@@ -1,4 +1,6 @@
 class KeysController < ApplicationController
+  verify :method => :post, :only => [:create], :redirect_to => { :action => :new_key }
+  
   def new_key
     @count = Key.count
   end
@@ -13,9 +15,6 @@ class KeysController < ApplicationController
         format.html # show.html.erb
       end
     end
-  end
-
-  def new
   end
 
   def create
