@@ -11,6 +11,10 @@
 
 class Key < ActiveRecord::Base
   URL_SIZE = 8
+  
+  # in days
+  KEY_EXPIRATION = 7
+  
   VALID_CHARACTERS = 'ABCDEFGHIJKLMNPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz2346789-@~'.split(//)
   
   before_create :set_url
@@ -27,5 +31,10 @@ class Key < ActiveRecord::Base
     url = ''
     URL_SIZE.times { url << VALID_CHARACTERS[rand(VALID_CHARACTERS.size)] }
     url
+  end
+  
+  # called periodically by the pearl daemon to remove keys that are older than 7 days old
+  def self.prune
+    Key.delete_all([ "created_at < ?", KEY_EXPIRATION.days.ago ])
   end
 end
